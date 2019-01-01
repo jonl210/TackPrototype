@@ -1,14 +1,26 @@
 /* Nav Style */
 
+#nav {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+#toggleButton {
+  border-color: #f26161;
+}
+
 #appName {
   font-size: 40px;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
   color: #fff;
+  margin-top: -8px;
+  padding-bottom: 0px;
 }
 
 #groupName {
   font-size: 21px;
   font-family: 'Roboto', sans-serif;
   color: #fff;
+  margin-top: 5px;
 }

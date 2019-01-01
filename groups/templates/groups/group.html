@@ -11,13 +11,14 @@
     <title>Tack - {{ group.name }}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'groups/group_style.css' %}"/>
     <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #f26161;">
+    <nav id="nav" class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #f26161;">
       <div class="container">
         <a id="appName" class="navbar-brand" href="{% url 'index' %}">tack</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button id="toggleButton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-2x fa-chevron-circle-down"></i>
         </button>
         <div id="navbarNav" class="navbar-collapse collapse">
           <span id="groupName" class="navbar-text">
