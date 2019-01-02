@@ -30,6 +30,12 @@
   margin: auto;
 }
 
+#groupDate {
+  margin-top: 5px;
+  font-size: 17px;
+  margin-right: 8px;
+}
+
 #uploadButton {
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
