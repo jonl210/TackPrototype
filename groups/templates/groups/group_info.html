@@ -1,0 +1,16 @@
+{% extends "home/index.html" %}
+
+{% load static %}
+
+{% block title %}<title>Tack - Group Info</title>{% endblock %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'groups/group_info_style.css' %}"/>{% endblock %}
+
+{% block pageHead %}<p class="text-center text">Group Name: <span class="groupName">{{ group.name }}</span></p>{% endblock %}
+
+{% block body %}
+  <div class="infoWrapper">
+    <h3 class="infoText">Link: <a id="groupURL" href="{% url 'group' group.u_id%}">{{ url }}</a></h3>
+    <p class="infoText">This is the link for your newly created private group.</p>
+    <p class="infoText">Share this with the people you want to be able to post and view photos.</p>
+  </div>
+{% endblock %}

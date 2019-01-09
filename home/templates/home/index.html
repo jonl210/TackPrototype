@@ -8,22 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <title>Tack - Easy group photo sharing</title>
+    {% block title %}<title>Tack - Easy group photo sharing</title>{% endblock %}
     <link rel="stylesheet" type="text/css" href="{% static 'home/index_style.css' %}"/>
     <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+    {% block css %}{% endblock %}
   </head>
   <body>
     <div class="container">
       <div class="bodyWrapper">
         <h3 id="appName" class="text-center">tack</h3>
-        <p class="text-center text">easily share photos with the people you want</p>
-        <div class="createGroupWrapper">
-          <p class="text-center text">create a group to start sharing!</p>
-          <form class="groupForm" action="{% url 'create_group' %}" method="POST">{% csrf_token %}
-            <span class="formText">Group Name:</span> <input id="nameField" type="text" name="name" placeholder="Name" required>
-            <button id="submitButton" class="btn" type="submit">Create</button>
-          </form>
-        </div>
+        {% block pageHead %}<p class="text-center text">easily share photos with the people you want</p>{% endblock %}
+        {% block body %}
+          <div class="createGroupWrapper">
+            <p class="text-center text">create a group to start sharing!</p>
+            <form class="groupForm" action="{% url 'create_group' %}" method="POST">{% csrf_token %}
+              <span class="formText">Group Name:</span> <input id="nameField" type="text" name="name" placeholder="Name" required>
+              <button id="submitButton" class="btn" type="submit">Create</button>
+            </form>
+          </div>
+        {% endblock %}
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.http import request
+from django.urls import reverse
 
 from .models import Group
 
@@ -10,12 +12,18 @@ def create_group(request):
         name = request.POST["name"]
         u_id = generate_id()
         Group.objects.create(name=name, u_id=u_id)
-        return redirect("index")
+        return redirect("info", u_id=u_id)
 
 #Display group
 def group(request, u_id):
     group = Group.objects.get(u_id=u_id)
     return render(request, "groups/group.html", {"group": group})
+
+#Display group info
+def info_page(request, u_id):
+    group = Group.objects.get(u_id=u_id)
+    url = request.build_absolute_uri(reverse("group", args=[group.u_id]))
+    return render(request, "groups/group_info.html", {"group": group, "url": url})
 
 #Generate unique group id
 def generate_id():
