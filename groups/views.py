@@ -22,7 +22,7 @@ def group(request, u_id):
 #Display group info
 def info_page(request, u_id):
     group = Group.objects.get(u_id=u_id)
-    url = request.build_absolute_uri(reverse("group", args=[group.u_id]))
+    url = request.build_absolute_uri(reverse("group", args=[group.u_id])) #Get absolute URL
     return render(request, "groups/group_info.html", {"group": group, "url": url})
 
 #Generate unique group id
