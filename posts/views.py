@@ -20,7 +20,7 @@ def upload_photo(request):
         description = request.POST["description"]
 
         storage_client = storage.Client()
-        bucket = storage_client.get_bucket("tackbucket")
+        bucket = storage_client.get_bucket("tack-media-bucket")
         blob = bucket.blob(post_u_id)
 
         photo = request.FILES["file"]
@@ -32,7 +32,7 @@ def upload_photo(request):
         group.posts.add(new_post)
         return redirect("group", u_id=request.POST["group_u_id"])
 
-#Generate id
+#Generate unique post id
 def generate_post_id():
     unique = False
     random_id = 0
