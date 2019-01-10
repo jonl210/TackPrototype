@@ -10,7 +10,7 @@ from google.cloud import storage
 import random, string, os
 
 #Set environment variable for access to cloud storage
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="googlekeys.json"
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="googlekeys.json"
 
 #Upload photo and create post
 def upload_photo(request):
