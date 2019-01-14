@@ -9,8 +9,9 @@ from google.cloud import storage
 #Python imports
 import random, string, os
 
-#Set environment variable for access to cloud storage
-# os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="googlekeys.json"
+#Set environment variable in prod for Cloud storage access
+if 'RDS_HOSTNAME' in os.environ:
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="creds.json"
 
 #Upload photo and create post
 def upload_photo(request):
@@ -20,7 +21,7 @@ def upload_photo(request):
         description = request.POST["description"]
 
         storage_client = storage.Client()
-        bucket = storage_client.get_bucket("tack-media-bucket")
+        bucket = storage_client.get_bucket("tack-media-store")
         blob = bucket.blob(post_u_id)
 
         photo = request.FILES["file"]
