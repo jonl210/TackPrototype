@@ -25,7 +25,7 @@ SECRET_KEY = '4$9ug!_9=$so7x^q0=dto2)ba1=w0%jtjbkdk2ewcp9vslyjyj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://tack-prod.tkwftuf54n.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
