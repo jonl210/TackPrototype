@@ -23,9 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4$9ug!_9=$so7x^q0=dto2)ba1=w0%jtjbkdk2ewcp9vslyjyj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if 'RDS_HOSTNAME' in os.environ:
+    DEBUG = False
+else:
+    DEBUG = True
 
-ALLOWED_HOSTS = ['tack-prod.tkwftuf54n.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['tack-prod.tkwftuf54n.us-west-2.elasticbeanstalk.com', '127.0.0.1']
 
 
 # Application definition
