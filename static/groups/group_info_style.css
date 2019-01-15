@@ -1,0 +1,21 @@
+/* Body Style */
+
+.groupName {
+  color: #f9d3d3;
+}
+
+.infoWrapper {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.infoText {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+#groupURL {
+  font-size: 19px;
+  color: #f9d3d3;
+}
