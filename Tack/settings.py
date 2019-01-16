@@ -28,7 +28,7 @@ if 'RDS_HOSTNAME' in os.environ:
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['tack-prod.tkwftuf54n.us-west-2.elasticbeanstalk.com', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'tack-prod.qdu3xzfd5i.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
