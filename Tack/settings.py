@@ -24,7 +24,7 @@ SECRET_KEY = '4$9ug!_9=$so7x^q0=dto2)ba1=w0%jtjbkdk2ewcp9vslyjyj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if 'RDS_HOSTNAME' in os.environ:
-    DEBUG = True
+    DEBUG = False
 else:
     DEBUG = True
 

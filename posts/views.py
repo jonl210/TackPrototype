@@ -9,6 +9,7 @@ from google.cloud import storage
 #Python imports
 import random, string, os
 
+#Set variable for Cloud storage access
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="creds.json"
 
 #Upload photo and create post
