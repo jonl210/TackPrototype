@@ -9,10 +9,6 @@ from google.cloud import storage
 #Python imports
 import random, string, os
 
-#Set environment variable in prod for Cloud storage access
-if 'RDS_HOSTNAME' in os.environ:
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/home/ec2-user/creds.json"
-
 #Upload photo and create post
 def upload_photo(request):
     if request.method == "POST":
