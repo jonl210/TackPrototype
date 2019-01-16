@@ -9,6 +9,8 @@ from google.cloud import storage
 #Python imports
 import random, string, os
 
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="creds.json"
+
 #Upload photo and create post
 def upload_photo(request):
     if request.method == "POST":
