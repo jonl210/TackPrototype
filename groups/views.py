@@ -17,7 +17,7 @@ def create_group(request):
 #Display group
 def group(request, u_id):
     group = Group.objects.get(u_id=u_id)
-    posts = group.posts.all()
+    posts = group.posts.all().order_by('-date')
     return render(request, "groups/group.html", {"group": group, "posts": posts})
 
 #Display group info

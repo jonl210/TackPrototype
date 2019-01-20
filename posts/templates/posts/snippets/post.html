@@ -1,1 +1,11 @@
-<img src="{{ post.url }}" class="img-thumbnail">
+<div class="photo card">
+  <img src="{{ post.url }}" class="imageSource img-thumbnail" width="450px" height=450px>
+  {% if post.description %}
+    <div class="description card-body">
+      <p class="descriptionText card-text">{{ post.description }}</p>
+    </div>
+  {% endif %}
+  <div class="date card-body">
+    <p class="dateText text-right card-text">{{ post.date|date:"M d Y" }}</p>
+  </div>
+</div>
